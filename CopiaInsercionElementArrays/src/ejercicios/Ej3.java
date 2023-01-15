@@ -13,37 +13,63 @@ public class Ej3 {
 	 */
 	public static void main(String[] args) {
 
-		boolean primo;
-		int numero;
-		int tabla[] = new int[10];
-		int primos[];
-		int contPrimos = 0;
+		int tabla[] = new int[10]; // Tabla con los numeros ingresados por el usuario
+		int primo[]; // Tabla de numeros primos
+		int noPrimo[]; // Tabla de numero NO primos
+		int contPrimo = 0; // Contador de numeros primos de la tabla Original
+		int contNoPrimos = 0; // Contador de numeros no primos de la tabla Original
+		int indPrimo = 0; // Indice de la tabla de numeros primos
+		int indNoPrimo = 0; // Indice de la tabla de numeros NO primos
 
 		Scanner lee = new Scanner(System.in);
 
 		System.out.println("Por favor introduzca 10 numeros separados por enter: ");
-
-		for (int i = 0; i < tabla.length; i++) {
+		
+		for (int i = 0; i < tabla.length; i++) {//Recorro la tabla y leo los numeros para llenarla
 			tabla[i] = lee.nextInt();
-		}
-		
-		// Recorremos la tabla
-		for (int i = 0; i < tabla.length; i++) {
-			// comprobamos si el numero es primo con la funcion esPrimo
-			primo = esPrimo(tabla[i]);
-			if (primo == true) {
-				contPrimos++; //Se incrementara el contador de los primos y nos dará el tamaño de la tabla "primos[]"
+			
+			if (esPrimo(tabla[i])) { //Verifico si es primo y en caso de que si el contador se incrementa
+				contPrimo++;
+			}//Fin del if
+
+			else {
+				contNoPrimos++; //en caso contrario se incrementa el contador de los NO primos
+			}//Fin del else
+		}//Fin de for
+
+		primo = new int[contPrimo]; //Tabla de numeros primos del tamaño de contador
+		noPrimo = new int[contNoPrimos];//Tabla de numeros NO primos del tamaño de contador
+
+		for (int i = 0; i < tabla.length; i++) {//Este for verifica si es primo o no y en caso de que si lo guarda en la tabla primo
+			
+			if (esPrimo(tabla[i])) {
+				primo[indPrimo] = tabla[i];//El indPrimo sirve para que se guarde el la posicion correcta de la tabla
+				indPrimo++;//Se va incrementando el indice 
+			} // fin if
+			
+			else {
+				noPrimo[indNoPrimo] = tabla[i];
+				indNoPrimo++;
 			}
-		}
-		primos = new int[contPrimos];//Ahora la tabla tiene el tamaño de los numeros primos que se hayan introducido
+		} // Fin for
 		
-		//Con este for tengo que llenar la tabla primo con los numeros primos de la tabla original
-		for(int i=0;i<tabla.length;i++) {
-			if (tabla[i]
-		}
-		System.arraycopy(primos, 0, tabla, 0, primos.length);
+		/*
+		System.out.println("Tabla Primos: " + Arrays.toString(primo));
+		System.out.println("Tabla NO Primos: " + Arrays.toString(noPrimo));
+		 */
+		
+		System.arraycopy(primo, 0, tabla, 0, primo.length); //Aqui se copia la posicion 0 de la tabla primo a la posicion 0 de la tabla original
+		//La longitud es la logitud de la tabla primo
+		
+		
+		System.arraycopy(noPrimo,0,tabla,primo.length,noPrimo.length);//En este caso se copia la tabla NOprimo desde el indice 0
+		//A la tabla Original, desde la posicion ultima del tamaño de la tabla primo, y la longitud es la de la tabla noPrimo
+
+		//Tabla ordenada
+
 		System.out.println(Arrays.toString(tabla));
-	}
+	
+	}// fin main
 
 	static boolean esPrimo(int n) {
 		for (int i = 2; i < n; i++) {
