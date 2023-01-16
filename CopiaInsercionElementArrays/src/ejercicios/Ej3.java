@@ -1,8 +1,6 @@
 package ejercicios;
-
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class Ej3 {
 	/*
 	 * Realiza un programa que pida 10 números por teclado y que los almacene en un
@@ -52,7 +50,7 @@ public class Ej3 {
 				indNoPrimo++;
 			}
 		} // Fin for
-		
+
 		/*
 		System.out.println("Tabla Primos: " + Arrays.toString(primo));
 		System.out.println("Tabla NO Primos: " + Arrays.toString(noPrimo));
@@ -64,9 +62,9 @@ public class Ej3 {
 		
 		System.arraycopy(noPrimo,0,tabla,primo.length,noPrimo.length);//En este caso se copia la tabla NOprimo desde el indice 0
 		//A la tabla Original, desde la posicion ultima del tamaño de la tabla primo, y la longitud es la de la tabla noPrimo
-
+		
 		//Tabla ordenada
-
+		
 		System.out.println(Arrays.toString(tabla));
 	
 	}// fin main
@@ -79,3 +77,4 @@ public class Ej3 {
 		return true;
 	}
 }
+

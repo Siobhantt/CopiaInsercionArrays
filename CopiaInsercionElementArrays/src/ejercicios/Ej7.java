@@ -26,7 +26,7 @@ public class Ej7 {
 
 			case 1:
 				System.out.println(Arrays.toString(tabla));
-				opcionUser = lee.nextInt();
+				
 				break;
 
 			case 2:
@@ -34,7 +34,7 @@ public class Ej7 {
 				for (int i = 0; i < tabla.length; i++) {
 					numUser = lee.nextInt();
 				} // fin for
-				opcionUser = lee.nextInt();
+				
 				break;
 
 			case 3:
