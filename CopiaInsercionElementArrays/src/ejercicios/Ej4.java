@@ -1,6 +1,6 @@
+
 package ejercicios;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ej4 {
@@ -12,21 +12,15 @@ public class Ej4 {
 	 */
 	public static void main(String[] args) {
 
-		int posicion;
 		int tablaEnteros[] = new int[10];
-		int tablaSinRepetir[] = new int[10];
+		int tablaDesordenada[] = new int[tablaEnteros.length];
 		Scanner lee = new Scanner(System.in);
 
-		for (int i = 0; i < tablaEnteros.length; i++) {// con este for lleno la tabla de los numeros introducidos por el
-														// usuario
+		System.out.println("Introduzca numeros separados por enter: ");
+		for (int i = 0; i < tablaEnteros.length; i++) {// Aqui estoy llenando la tabla
 			tablaEnteros[i] = lee.nextInt();
 		}
 
-		for (int i=0; i<tablaEnteros.length;i++) {
-			posicion = Arrays.binarySearch(tablaEnteros, )	
-		}
-
-		
-	}// fin del main
+	}// Fin del MAIN
 
 }
