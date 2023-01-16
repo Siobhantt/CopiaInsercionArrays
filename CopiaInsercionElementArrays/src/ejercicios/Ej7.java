@@ -17,18 +17,16 @@ public class Ej7 {
 		int numUser;
 		int tabla[] = new int[10];
 		int opcionUser;
-		boolean salida = true;// Variable para administrar la opcion de salida
+		boolean salida = false;// Variable para administrar la opcion de salida
 		Scanner lee = new Scanner(System.in);
 
-	
-		
 		do {
+			
 		System.out.println("Elija la opcion que prefiera: ");
 		System.out.println("1: Mostrar valores" + "\n" + "2: Introducir valor" + "\n" + "3: Salir");
 		System.out.print("Introduzca su opcion: ");
 		opcionUser = lee.nextInt();
 		
-			
 			switch (opcionUser) {
 
 			case 1:
@@ -41,10 +39,10 @@ public class Ej7 {
 				posicion = lee.nextInt();
 				System.out.println("Por favor introduzca un valor: ");
 				valor=lee.nextInt();
-				for (int i = 0; i < tabla.length; i++) {
-					numUser = lee.nextInt();
-				} // fin for
 				
+			tabla[posicion]= valor;
+				
+			
 				break;
 
 			case 3:
@@ -57,7 +55,7 @@ public class Ej7 {
 				break;
 			}// fin del switch
 		} // fin del DO
-		while (salida == false);
+		while (!salida);
 	}// fin del main
 
 }
