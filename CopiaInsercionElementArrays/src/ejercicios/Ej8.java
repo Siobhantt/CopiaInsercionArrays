@@ -1,5 +1,6 @@
 package ejercicios;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ej8 {
@@ -11,8 +12,8 @@ public class Ej8 {
 		int valorI;
 		int incremento;
 		int cantValores;
-		int secuencia[]= new int[cantValores];
-		int vacio[]=new int[0];
+		int secuencia[];
+		int serie;
 
 Scanner lee = new Scanner(System.in);
 		
@@ -24,13 +25,20 @@ Scanner lee = new Scanner(System.in);
 		
 		System.out.println("Introduzca la cantdad de valores que desee generar: ");
 		cantValores=lee.nextInt();
+		secuencia=new int[cantValores];
 		
+		serie=valorI;
 		
 		for(int i=0; i<secuencia.length;i++) {
-			secuencia[i] =valorI;
-		incremento= valorI+incremento;
-		
+			secuencia[i]=serie;
+			serie+=incremento;
+			
 		}
-	}
+		
+		System.out.println(Arrays.toString(secuencia));
+		
+		
+		
+	}//fin del main
 
 }
