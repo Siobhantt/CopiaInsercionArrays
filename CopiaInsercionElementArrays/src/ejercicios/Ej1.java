@@ -24,10 +24,11 @@ public class Ej1 {
 			numUser = lee.nextInt();
 			tabla[i] = numUser;
 		}
-		/*Aqui se copia la tabla desde la posicion 0,   */
+		/*Aqui se copia la tabla desde la posicion 0, hasta la tabla2 posicion1  */
 		/*Copia una cantidad de elementos, no el numero de las posiciones*/
 		System.arraycopy(tabla, 0, tabla2, 1, tabla.length - 1);
-
+		
+		//aqui se establece que la posicion 0 de la tabla 2 es la ultima pòsicion de la tabla original
 		tabla2[0] = tabla[tabla.length - 1];
 
 		System.out.println("La tabla introducida es: " + Arrays.toString(tabla));

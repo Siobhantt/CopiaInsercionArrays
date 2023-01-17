@@ -40,7 +40,7 @@ public class Ej2 {
 		//Imprimo la tabla 
 		System.out.println("Tabla actual: " + Arrays.toString(tabla));
 		
-		//Le doy el tamaño a las tablas
+		//Le doy el tamaño a las tablas utilizando el contador de pares e imapares
 		pares = new int[contP];
 
 		impares = new int[contImp];
@@ -50,7 +50,7 @@ public class Ej2 {
 
 			if (tabla[i] % 2 == 0) {
 				pares[indPar] = tabla[i];// Tuve que crear un indice para que se vaya colocando en la posicion correcta
-											// de la tabla 
+											// de las tablas par e imapr, porque al el indice iniciar en 0 los valores se colocaran en orden 
 				indPar++;
 			} else {
 				impares[indImpar] = tabla[i];
