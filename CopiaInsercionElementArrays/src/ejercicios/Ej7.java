@@ -20,7 +20,7 @@ public class Ej7 {
 		boolean salida = false;// Variable para administrar la opcion de salida
 		Scanner lee = new Scanner(System.in);
 
-		do {
+		do {//Iniciamos un do donde colocaremos el menu y las intrucciones
 			
 		System.out.println("Elija la opcion que prefiera: ");
 		System.out.println("1: Mostrar valores" + "\n" + "2: Introducir valor" + "\n" + "3: Salir");
@@ -28,10 +28,10 @@ public class Ej7 {
 		opcionUser = lee.nextInt();
 		System.out.println();
 		
-			switch (opcionUser) {
+			switch (opcionUser) {//iniciamos un switch para las opciones del usuario
 
 			case 1:
-				System.out.println(Arrays.toString(tabla));
+				System.out.println(Arrays.toString(tabla)); //en el primer caso mostramos la tabla
 				
 				break;
 
@@ -41,22 +41,21 @@ public class Ej7 {
 				System.out.println("Por favor introduzca un valor: ");
 				valor=lee.nextInt();
 				
-			tabla[posicion]= valor;
-				
-			
+			tabla[posicion]= valor;//aqui para introducir en la tabla lo que nos ha introdfucido el usuario
 				break;
 
 			case 3:
-				salida = true;
+				salida = true;//si el numero es 3 se iguala la salida a true y por eso saldria de la opcion
 				break;
 
 			default:
-				System.out.println("Opcion no valida.");
+				System.out.println("Opcion no valida.");//establecemos el default a una opcion no valida por si el usuario introduce alguna otra cosa
 				;
 				break;
 			}// fin del switch
 		} // fin del DO
-		while (!salida);
+		while (!salida);//MIENTRAS SALIDA NO SEA TRUE *CUANDO SE PONE "!" ANTES DE UN BOOLEAN SIGNIFICA NO!!!!!!*
+		lee.close();
 	}// fin del main
 
 }
