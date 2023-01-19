@@ -28,7 +28,7 @@ public class Ej4 {
 		for(int i=0; i<tablaEnteros.length; i++) {//recorro la tabla de donde quiero sacar los elementos
 			posBuscada =Arrays.binarySearch (tablaSinRepetidos, tablaEnteros[i]);//en la tabla vacia buscaré la "i"(el elemento en el que este el for)
 			
-			if(posBuscada<0) {//si el resultado de la busqueda es menor a 0 entonces
+			if(posBuscada<0) {//si el resultado de la busqueda es menor a 0 entonces(significa que no esta)
 				tablaSinRepetidos = Arrays.copyOf(tablaSinRepetidos, tablaSinRepetidos.length+1);//usare el metodo de insercion
 				//que es la tabla en la que quiero insertar el elemento, utilizando un array copyOf
 			//copio la tabla y la copia tendra una posicion mas(esta es la insercion ordenada)
